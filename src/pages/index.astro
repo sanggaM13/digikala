@@ -1,11 +1,335 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Wishlist from "./wishlist.astro";
 ---
 
 <Layout>
-	<Welcome />
+	<!-- NAVBAR -->
+	<nav class="fixed w-full top-0 z-50 bg-[#f4f4f4]/80 backdrop-blur-md border-b border-black/10">
+		<div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+			<a href="#" class="font-bold text-2xl tracking-tighter">
+				digikala<span class="font-light">studio</span>
+			</a>
+			<div class="hidden md:flex gap-8 text-sm font-medium">
+				<a href="#about" class="hover:text-gray-500 transition">About</a>
+				<a href="#services" class="hover:text-gray-500 transition">Services</a>
+				<a href="#portfolio" class="hover:text-gray-500 transition">Portfolio</a>
+				<a href="#contact" class="hover:text-gray-500 transition">Contact</a>
+			</div>
+			<a href="https://wa.me/6285252170250" target="_blank" class="bg-black text-white px-5 py-2 rounded-full text-sm hover:bg-gray-800 transition">
+				Hubungi Kami
+			</a>
+		</div>
+	</nav>
+
+	<!-- ========================================== -->
+	<!-- HERO SECTION -->
+	<!-- ========================================== -->
+	<section class="min-h-screen flex items-center px-6 max-w-6xl mx-auto pt-24 pb-12">
+		<div class="grid md:grid-cols-2 gap-12 items-center w-full">
+			<div class="hidden-anim order-2 md:order-1">
+				<p class="text-sm font-mono tracking-widest text-gray-500 mb-4">CREATIVE DIGITAL AGENCY</p>
+				<h1 class="text-5xl md:text-7xl font-bold tracking-tighter leading-tight mb-6">
+					Membangun Identitas <br /> Digital yang <span class="italic font-serif">Berkesan.</span>
+				</h1>
+				<p class="text-lg md:text-xl text-gray-600 max-w-lg mb-10">
+					Kami menggabungkan estetika visual dengan fungsionalitas teknis untuk membantu bisnis Anda tampil beda di dunia digital.
+				</p>
+				<div class="flex flex-wrap gap-4">
+					<a href="#portfolio" class="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition">Lihat Karya</a>
+					<a href="#about" class="border border-black px-8 py-3 rounded-full hover:bg-black hover:text-white transition">Tentang Kami</a>
+				</div>
+			</div>
+			<div class="hidden-anim order-1 md:order-2" style="transition-delay: 200ms;">
+				<div class="relative w-full aspect-square md:aspect-[4/5] bg-gray-200 rounded-3xl overflow-hidden shadow-2xl">
+					<img src="/images/gilang.jpeg" alt="Tim digikala studio" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700" />
+					<div class="absolute inset-0 border border-black/10 rounded-3xl pointer-events-none"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- LIGHT STREAK: Hero ke About -->
+	<div class="w-full flex justify-center">
+		<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-black/10 to-transparent"></div>
+	</div>
+
+	<!-- ========================================== -->
+	<!-- ABOUT & VISI MISI -->
+	<!-- ========================================== -->
+	<section id="about" class="py-24 bg-white px-6">
+		<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+			<div class="hidden-anim">
+				<h2 class="text-3xl font-bold mb-6">Tentang digikala studio</h2>
+				<p class="text-gray-600 mb-4 leading-relaxed">
+					digikala studio lahir dari semangat kolaborasi dan keinginan untuk membuat desain digital yang tidak hanya indah, tetapi juga cepat dan fungsional. Kami adalah tim kecil yang gesit, bekerja dengan Git untuk memastikan transparansi dan kolaborasi yang mulus.
+				</p>
+			</div>
+			<div class="hidden-anim" style="transition-delay: 200ms;">
+				<div class="mb-8">
+					<h3 class="text-xl font-bold mb-2">Visi</h3>
+					<p class="text-gray-600">Menjadi studio digital yang dikenal karena kualitas estetika dan performa teknis yang seimbang.</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold mb-2">Misi</h3>
+					<ul class="list-disc list-inside text-gray-600 space-y-2">
+						<li>Menyediakan solusi digital yang ringan, cepat, dan ramah pengguna.</li>
+						<li>Memberdayakan klien dengan teknologi modern.</li>
+						<li>Menjaga proses kerja yang transparan dan kolaboratif.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- LIGHT STREAK: About ke Process -->
+	<div class="w-full flex justify-center bg-white">
+		<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-black/10 to-transparent"></div>
+	</div>
+
+	<!-- ========================================== -->
+	<!-- PROCESS / WORKFLOW -->
+	<!-- ========================================== -->
+	<section id="process" class="py-24 bg-white text-black px-6">
+		<div class="max-w-6xl mx-auto">
+			<div class="hidden-anim mb-16 md:flex justify-between items-end">
+				<div>
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Proses Kerja Kami</h2>
+					<p class="text-gray-600 max-w-xl text-lg">
+						Dari brief sampai live, prosesnya jelas. Kami memastikan setiap tahap berjalan transparan dan terukur.
+					</p>
+				</div>
+			</div>
+
+			<div class="grid md:grid-cols-5 gap-8 relative">
+				<div class="hidden md:block absolute top-[28px] left-0 w-full h-[1px] bg-black/10 z-0"></div>
+				<!-- Step 1 -->
+				<div class="hidden-anim relative z-10 group">
+					<div class="w-14 h-14 rounded-full bg-white border-2 border-black/10 flex items-center justify-center font-mono text-sm mb-6 group-hover:border-black group-hover:bg-black group-hover:text-white transition duration-300">01</div>
+					<h3 class="text-xl font-bold mb-3">Konsultasi</h3>
+					<p class="text-sm text-gray-600 leading-relaxed">Diskusi mendalam untuk memahami visi, tujuan bisnis, dan kebutuhan target audiens Anda.</p>
+				</div>
+				<!-- Step 2 -->
+				<div class="hidden-anim relative z-10 group" style="transition-delay: 100ms;">
+					<div class="w-14 h-14 rounded-full bg-white border-2 border-black/10 flex items-center justify-center font-mono text-sm mb-6 group-hover:border-black group-hover:bg-black group-hover:text-white transition duration-300">02</div>
+					<h3 class="text-xl font-bold mb-3">Mockup</h3>
+					<p class="text-sm text-gray-600 leading-relaxed">Perancangan desain visual dan struktur antarmuka (UI/UX) sebelum masuk ke tahap koding.</p>
+				</div>
+				<!-- Step 3 -->
+				<div class="hidden-anim relative z-10 group" style="transition-delay: 200ms;">
+					<div class="w-14 h-14 rounded-full bg-white border-2 border-black/10 flex items-center justify-center font-mono text-sm mb-6 group-hover:border-black group-hover:bg-black group-hover:text-white transition duration-300">03</div>
+					<h3 class="text-xl font-bold mb-3">Development</h3>
+					<p class="text-sm text-gray-600 leading-relaxed">Proses coding menggunakan teknologi modern untuk mewujudkan desain menjadi website yang hidup.</p>
+				</div>
+				<!-- Step 4 -->
+				<div class="hidden-anim relative z-10 group" style="transition-delay: 300ms;">
+					<div class="w-14 h-14 rounded-full bg-white border-2 border-black/10 flex items-center justify-center font-mono text-sm mb-6 group-hover:border-black group-hover:bg-black group-hover:text-white transition duration-300">04</div>
+					<h3 class="text-xl font-bold mb-3">Revisi</h3>
+					<p class="text-sm text-gray-600 leading-relaxed">Sesi uji coba dan penyempurnaan. Kami menampung masukan Anda untuk hasil yang maksimal.</p>
+				</div>
+				<!-- Step 5 -->
+				<div class="hidden-anim relative z-10 group" style="transition-delay: 400ms;">
+					<div class="w-14 h-14 rounded-full bg-white border-2 border-black/10 flex items-center justify-center font-mono text-sm mb-6 group-hover:border-black group-hover:bg-black group-hover:text-white transition duration-300">05</div>
+					<h3 class="text-xl font-bold mb-3">Launching</h3>
+					<p class="text-sm text-gray-600 leading-relaxed">Website siap dirilis ke publik. Kami memastikan semua sistem berjalan lancar dan optimal.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- LIGHT STREAK: Process ke Services -->
+	<div class="w-full flex justify-center bg-white">
+		<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-black/10 to-transparent"></div>
+	</div>
+
+	<!-- ========================================== -->
+	<!-- 3. SERVICES + WISHLIST (STICKY PINNING) -->
+	<!-- ========================================== -->
+	<div class="relative h-[180vh] bg-[#f4f4f4]">
+		<div class="sticky top-0 h-screen w-full flex flex-col justify-center bg-[#f4f4f4] z-10">
+			<section id="services" class="w-full max-w-6xl mx-auto px-6">
+				<div class="mb-8 text-center md:text-left">
+					<h2 class="text-3xl font-bold mb-2">Layanan Kami</h2>
+					<p class="text-gray-500">Solusi menyeluruh untuk kebutuhan digital Anda.</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+					<div class="bg-white p-8 rounded-2xl shadow-sm border border-black/5">
+						<h3 class="font-bold text-xl mb-3">Desain UI/UX</h3>
+						<p class="text-gray-600 text-sm">Desain antarmuka dan pengalaman pengguna untuk website dan aplikasi mobile yang intuitif.</p>
+					</div>
+					<div class="bg-white p-8 rounded-2xl shadow-sm border border-black/5">
+						<h3 class="font-bold text-xl mb-3">Pengembangan Web</h3>
+						<p class="text-gray-600 text-sm">Website company profile, portofolio, e-commerce, dan landing page dengan performa super cepat.</p>
+					</div>
+					<div class="bg-white p-8 rounded-2xl shadow-sm border border-black/5">
+						<h3 class="font-bold text-xl mb-3">Branding & Identitas</h3>
+						<p class="text-gray-600 text-sm">Desain logo, panduan brand, dan materi pemasaran untuk identitas visual yang kuat.</p>
+					</div>
+					<div class="bg-white p-8 rounded-2xl shadow-sm border border-black/5">
+						<h3 class="font-bold text-xl mb-3">Motion & Animasi</h3>
+						<p class="text-gray-600 text-sm">Animasi interaktif, micro-interactions, dan video pendek untuk meningkatkan engagement.</p>
+					</div>
+					<div class="bg-white p-8 rounded-2xl shadow-sm border border-black/5">
+						<h3 class="font-bold text-xl mb-3">Konsultasi Digital</h3>
+						<p class="text-gray-600 text-sm">Audit website, optimasi performa (SEO & speed), dan strategi konten digital.</p>
+					</div>
+					<div class="bg-white p-8 rounded-2xl shadow-sm border border-black/5">
+						<h3 class="font-bold text-xl mb-3">ERP Manager</h3>
+						<p class="text-gray-600 text-sm">Membangun sistem ERP dengan efisien, dan performa super berbasis LLM.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<!-- ========================================== -->
+	<!-- 4. WISHLIST (MENIMPA DARI BAWAH) -->
+	<!-- ========================================== -->
+	<div class="relative z-20 -mt-180">
+		<!-- LIGHT STREAK: Di atas Wishlist (Garis Bercahaya Putih) -->
+		<div class="w-full flex justify-center absolute top-0 left-0 pt-8 z-30">
+			<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent shadow-[0_0_15px_rgba(255,255,255,0.3)]"></div>
+		</div>
+		
+		<Wishlist />
+	</div>
+
+	<!-- LIGHT STREAK: Wishlist ke Portfolio -->
+	<div class="w-full flex justify-center bg-[#0a0a0a]">
+		<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+	</div>
+
+	<!-- ========================================== -->
+	<!-- PORTFOLIO -->
+	<!-- ========================================== -->
+	<section id="portfolio" class="py-24 bg-[#0a0a0a] px-6">
+		<div class="max-w-6xl mx-auto">
+			<div class="hidden-anim mb-12 flex justify-between items-end">
+				<div>
+					<h2 class="text-3xl font-bold mb-2 text-white">Proyek Pilihan</h2>
+					<p class="text-gray-400">Beberapa karya yang kami banggakan.</p>
+				</div>
+			</div>
+			<div class="grid md:grid-cols-2 gap-8">
+				<!-- Project 1 -->
+				<a href="https://tatausahasmpn3rajadesa.my.id" target="_blank" class="hidden-anim group cursor-pointer block">
+					<div class="w-full aspect-video bg-white/5 rounded-2xl mb-4 overflow-hidden relative border border-white/10">
+						<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-300 z-10"></div>
+						<img src="/images/smpn3.png" alt="Sistem administrasi tata usaha seragam" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+					</div>
+					<h3 class="text-xl font-bold group-hover:underline text-white">Sistem Manajemen Inventaris</h3>
+					<p class="text-gray-400 text-sm">Web App / Dashboard Analytics</p>
+				</a>
+
+				<!-- Project 2 -->
+				<a href="https://link-demo-proyek-2.com" target="_blank" class="hidden-anim group cursor-pointer block" style="transition-delay: 150ms;">
+					<div class="w-full aspect-video bg-white/5 rounded-2xl mb-4 overflow-hidden relative border border-white/10">
+						<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-300 z-10"></div>
+						<img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=2070&auto=format&fit=crop" alt="Kampanye Produk Kecantikan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+					</div>
+					<h3 class="text-xl font-bold group-hover:underline text-white">Kampanye Produk Kecantikan</h3>
+					<p class="text-gray-400 text-sm">Landing Page / Interactive Scroll</p>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- LIGHT STREAK: Portfolio ke FAQ -->
+	<div class="w-full flex justify-center bg-[#0a0a0a]">
+		<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+	</div>
+
+	<!-- ========================================== -->
+	<!-- FAQ -->
+	<!-- ========================================== -->
+	<section class="py-24 px-6 bg-[#0a0a0a]">
+		<div class="max-w-4xl mx-auto">
+			<div class="hidden-anim text-center mb-12">
+				<h2 class="text-3xl font-bold mb-2 text-white">Pertanyaan Umum</h2>
+				<p class="text-gray-400">Hal yang biasanya ditanyakan klien.</p>
+			</div>
+			<div class="space-y-4 hidden-anim">
+				<details class="group bg-white/5 p-6 rounded-2xl cursor-pointer border border-white/10">
+					<summary class="font-bold list-none flex justify-between items-center text-white">
+						Berapa lama proses pengerjaan?
+						<span class="transition group-open:rotate-180 text-gray-500">↓</span>
+					</summary>
+					<p class="mt-4 text-gray-400">Tergantung kompleksitas, rata-rata 2-6 minggu.</p>
+				</details>
+				<details class="group bg-white/5 p-6 rounded-2xl cursor-pointer border border-white/10">
+					<summary class="font-bold list-none flex justify-between items-center text-white">
+						Apakah bisa revisi?
+						<span class="transition group-open:rotate-180 text-gray-500">↓</span>
+					</summary>
+					<p class="mt-4 text-gray-400">Ya, kami menyediakan 2-3 kali revisi mayor sesuai kesepakatan.</p>
+				</details>
+				<details class="group bg-white/5 p-6 rounded-2xl cursor-pointer border border-white/10">
+					<summary class="font-bold list-none flex justify-between items-center text-white">
+						Bagaimana sistem pembayaran?
+						<span class="transition group-open:rotate-180 text-gray-500">↓</span>
+					</summary>
+					<p class="mt-4 text-gray-400">DP 50% di awal, pelunasan setelah proyek selesai dan disetujui.</p>
+				</details>
+			</div>
+		</div>
+	</section>
+
+	<!-- LIGHT STREAK: FAQ ke Contact -->
+	<div class="w-full flex justify-center bg-[#0a0a0a]">
+		<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+	</div>
+
+	<!-- ========================================== -->
+	<!-- CONTACT (FORMSPREE) -->
+	<!-- ========================================== -->
+	<section id="contact" class="py-24 bg-black text-white px-6">
+		<div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-16">
+			<div class="hidden-anim">
+				<h2 class="text-4xl font-bold mb-6">Mari Berkolaborasi.</h2>
+				<p class="text-gray-400 mb-8">Punya ide proyek? Kirimkan pesan dan kami akan segera menghubungi Anda.</p>
+				<div class="space-y-4 text-gray-300">
+					<p>Email: hello@digikalastudio.com</p>
+					<p>
+						WhatsApp: <a href="https://wa.me/6285252170250" target="_blank" class="underline hover:text-white">+62 852-5217-0250</a>
+					</p>
+				</div>
+			</div>
+
+			<form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="hidden-anim space-y-4 bg-white/5 p-8 rounded-2xl border border-white/10" style="transition-delay: 200ms;">
+				<div>
+					<label class="block text-sm text-gray-400 mb-2">Nama</label>
+					<input type="text" name="name" required class="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-white transition text-white" />
+				</div>
+				<div>
+					<label class="block text-sm text-gray-400 mb-2">Email</label>
+					<input type="email" name="email" required class="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-white transition text-white" />
+				</div>
+				<div>
+					<label class="block text-sm text-gray-400 mb-2">Pesan</label>
+					<textarea name="message" rows="3" required class="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-white transition text-white"></textarea>
+				</div>
+				<button type="submit" class="w-full bg-white text-black font-bold py-3 rounded-full hover:bg-gray-200 transition mt-4">Kirim Pesan</button>
+			</form>
+		</div>
+	</section>
+
+	<!-- LIGHT STREAK: Contact ke Footer -->
+	<div class="w-full flex justify-center bg-black">
+		<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+	</div>
+
+	<!-- ========================================== -->
+	<!-- FOOTER -->
+	<!-- ========================================== -->
+	<footer class="bg-black text-gray-500 py-8 text-center text-sm border-t border-white/10">
+		<div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+			<p>© 2026 digikala studio. All rights reserved.</p>
+			<div class="flex gap-6">
+				<a href="#" class="hover:text-white transition">Instagram</a>
+				<a href="#" class="hover:text-white transition">LinkedIn</a>
+				<a href="#" class="hover:text-white transition">GitHub</a>
+			</div>
+		</div>
+	</footer>
 </Layout>

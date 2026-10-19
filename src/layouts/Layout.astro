@@ -1,23 +1,44 @@
+---
+import '../styles/global.css'; // Pastikan file css ini ada
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="id">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="UTF-8" />
+		<meta name="description" content="digikala studio - Creative Digital Agency" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>digikala studio</title>
 	</head>
-	<body>
+	<body class="bg-[#f4f4f4] text-[#111] font-sans antialiased overflow-x-hidden selection:bg-black selection:text-white">
 		<slot />
+
+		<!-- Script Animasi Scroll Ringan -->
+		<script>
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('show');
+					}
+				});
+			});
+			const hiddenElements = document.querySelectorAll('.hidden-anim');
+			hiddenElements.forEach((el) => observer.observe(el));
+		</script>
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  /* Animasi Fade Up */
+  .hidden-anim {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+  }
+  .hidden-anim.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 </style>
