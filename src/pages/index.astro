@@ -6,8 +6,8 @@ import Wishlist from "./wishlist.astro";
 <Layout>
 	<!-- NAVBAR -->
 	<nav class="fixed w-full top-0 z-50 bg-[#f4f4f4]/80 backdrop-blur-md border-b border-black/10">
-		<div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-			<a href="#" class="font-bold text-2xl tracking-tighter">
+		<div class="max-w-6xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+			<a href="#" class="font-bold text-xl md:text-2xl tracking-tighter">
 				digikala<span class="font-light">studio</span>
 			</a>
 			<div class="hidden md:flex gap-8 text-sm font-medium">
@@ -16,7 +16,7 @@ import Wishlist from "./wishlist.astro";
 				<a href="#portfolio" class="hover:text-gray-500 transition">Portfolio</a>
 				<a href="#contact" class="hover:text-gray-500 transition">Contact</a>
 			</div>
-			<a href="https://wa.me/6285252170250" target="_blank" class="bg-black text-white px-5 py-2 rounded-full text-sm hover:bg-gray-800 transition">
+			<a href="https://wa.me/6285252170250" target="_blank" class="bg-black text-white px-4 md:px-5 py-2 rounded-full text-xs md:text-sm hover:bg-gray-800 transition">
 				Hubungi Kami
 			</a>
 		</div>
@@ -25,19 +25,19 @@ import Wishlist from "./wishlist.astro";
 	<!-- ========================================== -->
 	<!-- HERO SECTION -->
 	<!-- ========================================== -->
-	<section class="min-h-screen flex items-center px-6 max-w-6xl mx-auto pt-24 pb-12">
-		<div class="grid md:grid-cols-2 gap-12 items-center w-full">
-			<div class="hidden-anim order-2 md:order-1">
-				<p class="text-sm font-mono tracking-widest text-gray-500 mb-4">CREATIVE DIGITAL AGENCY</p>
-				<h1 class="text-5xl md:text-7xl font-bold tracking-tighter leading-tight mb-6">
-					Membangun Identitas <br /> Digital yang <span class="italic font-serif">Berkesan.</span>
+	<section class="min-h-screen flex items-center px-4 md:px-6 max-w-6xl mx-auto pt-24 pb-12">
+		<div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center w-full">
+			<div class="hidden-anim order-2 md:order-1 text-center md:text-left">
+				<p class="text-xs md:text-sm font-mono tracking-widest text-gray-500 mb-4">CREATIVE DIGITAL AGENCY</p>
+				<h1 class="text-4xl md:text-7xl font-bold tracking-tighter leading-tight mb-6">
+					Membangun Identitas <br class="hidden md:block"/> Digital yang <span class="italic font-serif">Berkesan.</span>
 				</h1>
-				<p class="text-lg md:text-xl text-gray-600 max-w-lg mb-10">
+				<p class="text-base md:text-xl text-gray-600 max-w-lg mx-auto md:mx-0 mb-10">
 					Kami menggabungkan estetika visual dengan fungsionalitas teknis untuk membantu bisnis Anda tampil beda di dunia digital.
 				</p>
-				<div class="flex flex-wrap gap-4">
-					<a href="#portfolio" class="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition">Lihat Karya</a>
-					<a href="#about" class="border border-black px-8 py-3 rounded-full hover:bg-black hover:text-white transition">Tentang Kami</a>
+				<div class="flex flex-wrap justify-center md:justify-start gap-4">
+					<a href="#portfolio" class="bg-black text-white px-6 md:px-8 py-3 rounded-full hover:bg-gray-800 transition text-sm md:text-base">Lihat Karya</a>
+					<a href="#about" class="border border-black px-6 md:px-8 py-3 rounded-full hover:bg-black hover:text-white transition text-sm md:text-base">Tentang Kami</a>
 				</div>
 			</div>
 			<div class="hidden-anim order-1 md:order-2" style="transition-delay: 200ms;">
@@ -49,7 +49,7 @@ import Wishlist from "./wishlist.astro";
 		</div>
 	</section>
 
-	<!-- LIGHT STREAK: Hero ke About -->
+	<!-- LIGHT STREAK -->
 	<div class="w-full flex justify-center">
 		<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-black/10 to-transparent"></div>
 	</div>
@@ -57,22 +57,22 @@ import Wishlist from "./wishlist.astro";
 	<!-- ========================================== -->
 	<!-- ABOUT & VISI MISI -->
 	<!-- ========================================== -->
-	<section id="about" class="py-24 bg-white px-6">
-		<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+	<section id="about" class="py-16 md:py-24 bg-white px-4 md:px-6">
+		<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16">
 			<div class="hidden-anim">
-				<h2 class="text-3xl font-bold mb-6">Tentang digikala studio</h2>
-				<p class="text-gray-600 mb-4 leading-relaxed">
+				<h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Tentang digikala studio</h2>
+				<p class="text-sm md:text-base text-gray-600 mb-4 leading-relaxed">
 					digikala studio lahir dari semangat kolaborasi dan keinginan untuk membuat desain digital yang tidak hanya indah, tetapi juga cepat dan fungsional. Kami adalah tim kecil yang gesit, bekerja dengan Git untuk memastikan transparansi dan kolaborasi yang mulus.
 				</p>
 			</div>
 			<div class="hidden-anim" style="transition-delay: 200ms;">
-				<div class="mb-8">
-					<h3 class="text-xl font-bold mb-2">Visi</h3>
-					<p class="text-gray-600">Menjadi studio digital yang dikenal karena kualitas estetika dan performa teknis yang seimbang.</p>
+				<div class="mb-6 md:mb-8">
+					<h3 class="text-lg md:text-xl font-bold mb-2">Visi</h3>
+					<p class="text-sm md:text-base text-gray-600">Menjadi studio digital yang dikenal karena kualitas estetika dan performa teknis yang seimbang.</p>
 				</div>
 				<div>
-					<h3 class="text-xl font-bold mb-2">Misi</h3>
-					<ul class="list-disc list-inside text-gray-600 space-y-2">
+					<h3 class="text-lg md:text-xl font-bold mb-2">Misi</h3>
+					<ul class="list-disc list-inside text-sm md:text-base text-gray-600 space-y-2">
 						<li>Menyediakan solusi digital yang ringan, cepat, dan ramah pengguna.</li>
 						<li>Memberdayakan klien dengan teknologi modern.</li>
 						<li>Menjaga proses kerja yang transparan dan kolaboratif.</li>
@@ -82,7 +82,7 @@ import Wishlist from "./wishlist.astro";
 		</div>
 	</section>
 
-	<!-- LIGHT STREAK: About ke Process -->
+	<!-- LIGHT STREAK -->
 	<div class="w-full flex justify-center bg-white">
 		<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-black/10 to-transparent"></div>
 	</div>
@@ -90,93 +90,109 @@ import Wishlist from "./wishlist.astro";
 	<!-- ========================================== -->
 	<!-- PROCESS / WORKFLOW -->
 	<!-- ========================================== -->
-	<section id="process" class="py-24 bg-white text-black px-6">
+	<section id="process" class="py-16 md:py-24 bg-white text-black px-4 md:px-6">
 		<div class="max-w-6xl mx-auto">
-			<div class="hidden-anim mb-16 md:flex justify-between items-end">
+			<div class="hidden-anim mb-10 md:mb-16 md:flex justify-between items-end">
 				<div>
-					<h2 class="text-3xl md:text-4xl font-bold mb-4">Proses Kerja Kami</h2>
-					<p class="text-gray-600 max-w-xl text-lg">
+					<h2 class="text-2xl md:text-4xl font-bold mb-3 md:mb-4">Proses Kerja Kami</h2>
+					<p class="text-sm md:text-lg text-gray-600 max-w-xl">
 						Dari brief sampai live, prosesnya jelas. Kami memastikan setiap tahap berjalan transparan dan terukur.
 					</p>
 				</div>
 			</div>
 
-			<div class="grid md:grid-cols-5 gap-8 relative">
+			<!-- Grid di HP menjadi 1 kolom, di desktop 5 kolom -->
+			<div class="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 relative">
 				<div class="hidden md:block absolute top-[28px] left-0 w-full h-[1px] bg-black/10 z-0"></div>
 				<!-- Step 1 -->
-				<div class="hidden-anim relative z-10 group">
-					<div class="w-14 h-14 rounded-full bg-white border-2 border-black/10 flex items-center justify-center font-mono text-sm mb-6 group-hover:border-black group-hover:bg-black group-hover:text-white transition duration-300">01</div>
-					<h3 class="text-xl font-bold mb-3">Konsultasi</h3>
-					<p class="text-sm text-gray-600 leading-relaxed">Diskusi mendalam untuk memahami visi, tujuan bisnis, dan kebutuhan target audiens Anda.</p>
+				<div class="hidden-anim relative z-10 group flex md:block items-start gap-4 md:gap-0">
+					<div class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-full bg-white border-2 border-black/10 flex items-center justify-center font-mono text-xs md:text-sm md:mb-6 group-hover:border-black group-hover:bg-black group-hover:text-white transition duration-300">01</div>
+					<div>
+						<h3 class="text-lg md:text-xl font-bold mb-1 md:mb-3">Konsultasi</h3>
+						<p class="text-xs md:text-sm text-gray-600 leading-relaxed">Diskusi mendalam untuk memahami visi, tujuan bisnis, dan kebutuhan target audiens Anda.</p>
+					</div>
 				</div>
 				<!-- Step 2 -->
-				<div class="hidden-anim relative z-10 group" style="transition-delay: 100ms;">
-					<div class="w-14 h-14 rounded-full bg-white border-2 border-black/10 flex items-center justify-center font-mono text-sm mb-6 group-hover:border-black group-hover:bg-black group-hover:text-white transition duration-300">02</div>
-					<h3 class="text-xl font-bold mb-3">Mockup</h3>
-					<p class="text-sm text-gray-600 leading-relaxed">Perancangan desain visual dan struktur antarmuka (UI/UX) sebelum masuk ke tahap koding.</p>
+				<div class="hidden-anim relative z-10 group flex md:block items-start gap-4 md:gap-0" style="transition-delay: 100ms;">
+					<div class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-full bg-white border-2 border-black/10 flex items-center justify-center font-mono text-xs md:text-sm md:mb-6 group-hover:border-black group-hover:bg-black group-hover:text-white transition duration-300">02</div>
+					<div>
+						<h3 class="text-lg md:text-xl font-bold mb-1 md:mb-3">Mockup</h3>
+						<p class="text-xs md:text-sm text-gray-600 leading-relaxed">Perancangan desain visual dan struktur antarmuka (UI/UX) sebelum masuk ke tahap koding.</p>
+					</div>
 				</div>
 				<!-- Step 3 -->
-				<div class="hidden-anim relative z-10 group" style="transition-delay: 200ms;">
-					<div class="w-14 h-14 rounded-full bg-white border-2 border-black/10 flex items-center justify-center font-mono text-sm mb-6 group-hover:border-black group-hover:bg-black group-hover:text-white transition duration-300">03</div>
-					<h3 class="text-xl font-bold mb-3">Development</h3>
-					<p class="text-sm text-gray-600 leading-relaxed">Proses coding menggunakan teknologi modern untuk mewujudkan desain menjadi website yang hidup.</p>
+				<div class="hidden-anim relative z-10 group flex md:block items-start gap-4 md:gap-0" style="transition-delay: 200ms;">
+					<div class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-full bg-white border-2 border-black/10 flex items-center justify-center font-mono text-xs md:text-sm md:mb-6 group-hover:border-black group-hover:bg-black group-hover:text-white transition duration-300">03</div>
+					<div>
+						<h3 class="text-lg md:text-xl font-bold mb-1 md:mb-3">Development</h3>
+						<p class="text-xs md:text-sm text-gray-600 leading-relaxed">Proses coding menggunakan teknologi modern untuk mewujudkan desain menjadi website yang hidup.</p>
+					</div>
 				</div>
 				<!-- Step 4 -->
-				<div class="hidden-anim relative z-10 group" style="transition-delay: 300ms;">
-					<div class="w-14 h-14 rounded-full bg-white border-2 border-black/10 flex items-center justify-center font-mono text-sm mb-6 group-hover:border-black group-hover:bg-black group-hover:text-white transition duration-300">04</div>
-					<h3 class="text-xl font-bold mb-3">Revisi</h3>
-					<p class="text-sm text-gray-600 leading-relaxed">Sesi uji coba dan penyempurnaan. Kami menampung masukan Anda untuk hasil yang maksimal.</p>
+				<div class="hidden-anim relative z-10 group flex md:block items-start gap-4 md:gap-0" style="transition-delay: 300ms;">
+					<div class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-full bg-white border-2 border-black/10 flex items-center justify-center font-mono text-xs md:text-sm md:mb-6 group-hover:border-black group-hover:bg-black group-hover:text-white transition duration-300">04</div>
+					<div>
+						<h3 class="text-lg md:text-xl font-bold mb-1 md:mb-3">Revisi</h3>
+						<p class="text-xs md:text-sm text-gray-600 leading-relaxed">Sesi uji coba dan penyempurnaan. Kami menampung masukan Anda untuk hasil yang maksimal.</p>
+					</div>
 				</div>
 				<!-- Step 5 -->
-				<div class="hidden-anim relative z-10 group" style="transition-delay: 400ms;">
-					<div class="w-14 h-14 rounded-full bg-white border-2 border-black/10 flex items-center justify-center font-mono text-sm mb-6 group-hover:border-black group-hover:bg-black group-hover:text-white transition duration-300">05</div>
-					<h3 class="text-xl font-bold mb-3">Launching</h3>
-					<p class="text-sm text-gray-600 leading-relaxed">Website siap dirilis ke publik. Kami memastikan semua sistem berjalan lancar dan optimal.</p>
+				<div class="hidden-anim relative z-10 group flex md:block items-start gap-4 md:gap-0" style="transition-delay: 400ms;">
+					<div class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-full bg-white border-2 border-black/10 flex items-center justify-center font-mono text-xs md:text-sm md:mb-6 group-hover:border-black group-hover:bg-black group-hover:text-white transition duration-300">05</div>
+					<div>
+						<h3 class="text-lg md:text-xl font-bold mb-1 md:mb-3">Launching</h3>
+						<p class="text-xs md:text-sm text-gray-600 leading-relaxed">Website siap dirilis ke publik. Kami memastikan semua sistem berjalan lancar dan optimal.</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- LIGHT STREAK: Process ke Services -->
+	<!-- LIGHT STREAK -->
 	<div class="w-full flex justify-center bg-white">
 		<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-black/10 to-transparent"></div>
 	</div>
-
 	<!-- ========================================== -->
 	<!-- 3. SERVICES + WISHLIST (STICKY PINNING) -->
 	<!-- ========================================== -->
-	<div class="relative h-[180vh] bg-[#f4f4f4]">
-		<div class="sticky top-0 h-screen w-full flex flex-col justify-center bg-[#f4f4f4] z-10">
-			<section id="services" class="w-full max-w-6xl mx-auto px-6">
-				<div class="mb-8 text-center md:text-left">
-					<h2 class="text-3xl font-bold mb-2">Layanan Kami</h2>
-					<p class="text-gray-500">Solusi menyeluruh untuk kebutuhan digital Anda.</p>
+	<div class="relative h-[170vh] bg-[#f4f4f4]">
+		<!-- pt-32 untuk HP, md:pt-0 untuk laptop (background full) -->
+		<div class="sticky top-0 h-screen w-full flex flex-col justify-center bg-[#f4f4f4] z-10 pt-32 md:pt-0">
+			
+			<!-- 
+				md:-mt-32 : Menarik ISI KONTEN ke atas khusus di laptop.
+				Jika masih kurang ke atas, ubah menjadi md:-mt-40 atau md:-mt-48.
+			-->
+			<section id="services" class="w-full max-w-6xl mx-auto px-4 md:px-6 md:-mt-48">
+				<div class="mb-4 md:mb-8 text-center md:text-left">
+					<h2 class="text-2xl md:text-3xl font-bold mb-2">Layanan Kami</h2>
+					<p class="text-sm md:text-base text-gray-500">Solusi menyeluruh untuk kebutuhan digital Anda.</p>
 				</div>
 
-				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-					<div class="bg-white p-8 rounded-2xl shadow-sm border border-black/5">
-						<h3 class="font-bold text-xl mb-3">Desain UI/UX</h3>
-						<p class="text-gray-600 text-sm">Desain antarmuka dan pengalaman pengguna untuk website dan aplikasi mobile yang intuitif.</p>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+					<div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-black/5">
+						<h3 class="font-bold text-lg md:text-xl mb-2 md:mb-3">Desain UI/UX</h3>
+						<p class="text-gray-600 text-xs md:text-sm">Desain antarmuka dan pengalaman pengguna untuk website dan aplikasi mobile yang intuitif.</p>
 					</div>
-					<div class="bg-white p-8 rounded-2xl shadow-sm border border-black/5">
-						<h3 class="font-bold text-xl mb-3">Pengembangan Web</h3>
-						<p class="text-gray-600 text-sm">Website company profile, portofolio, e-commerce, dan landing page dengan performa super cepat.</p>
+					<div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-black/5">
+						<h3 class="font-bold text-lg md:text-xl mb-2 md:mb-3">Pengembangan Web</h3>
+						<p class="text-gray-600 text-xs md:text-sm">Website company profile, portofolio, e-commerce, dan landing page dengan performa super cepat.</p>
 					</div>
-					<div class="bg-white p-8 rounded-2xl shadow-sm border border-black/5">
-						<h3 class="font-bold text-xl mb-3">Branding & Identitas</h3>
-						<p class="text-gray-600 text-sm">Desain logo, panduan brand, dan materi pemasaran untuk identitas visual yang kuat.</p>
+					<div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-black/5">
+						<h3 class="font-bold text-lg md:text-xl mb-2 md:mb-3">Branding & Identitas</h3>
+						<p class="text-gray-600 text-xs md:text-sm">Desain logo, panduan brand, dan materi pemasaran untuk identitas visual yang kuat.</p>
 					</div>
-					<div class="bg-white p-8 rounded-2xl shadow-sm border border-black/5">
-						<h3 class="font-bold text-xl mb-3">Motion & Animasi</h3>
-						<p class="text-gray-600 text-sm">Animasi interaktif, micro-interactions, dan video pendek untuk meningkatkan engagement.</p>
+					<div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-black/5">
+						<h3 class="font-bold text-lg md:text-xl mb-2 md:mb-3">Motion & Animasi</h3>
+						<p class="text-gray-600 text-xs md:text-sm">Animasi interaktif, micro-interactions, dan video pendek untuk meningkatkan engagement.</p>
 					</div>
-					<div class="bg-white p-8 rounded-2xl shadow-sm border border-black/5">
-						<h3 class="font-bold text-xl mb-3">Konsultasi Digital</h3>
-						<p class="text-gray-600 text-sm">Audit website, optimasi performa (SEO & speed), dan strategi konten digital.</p>
+					<div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-black/5">
+						<h3 class="font-bold text-lg md:text-xl mb-2 md:mb-3">Konsultasi Digital</h3>
+						<p class="text-gray-600 text-xs md:text-sm">Audit website, optimasi performa (SEO & speed), dan strategi konten digital.</p>
 					</div>
-					<div class="bg-white p-8 rounded-2xl shadow-sm border border-black/5">
-						<h3 class="font-bold text-xl mb-3">ERP Manager</h3>
-						<p class="text-gray-600 text-sm">Membangun sistem ERP dengan efisien, dan performa super berbasis LLM.</p>
+					<div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-black/5">
+						<h3 class="font-bold text-lg md:text-xl mb-2 md:mb-3">ERP Manager</h3>
+						<p class="text-gray-600 text-xs md:text-sm">Membangun sistem ERP dengan efisien, dan performa super berbasis LLM.</p>
 					</div>
 				</div>
 			</section>
@@ -186,56 +202,51 @@ import Wishlist from "./wishlist.astro";
 	<!-- ========================================== -->
 	<!-- 4. WISHLIST (MENIMPA DARI BAWAH) -->
 	<!-- ========================================== -->
-	<div class="relative z-20 -mt-180">
-		<!-- LIGHT STREAK: Di atas Wishlist (Garis Bercahaya Putih) -->
-		<div class="w-full flex justify-center absolute top-0 left-0 pt-8 z-30">
+	<div class="relative z-20 -mt-[100vh] md:-mt-180">
+		<!-- LIGHT STREAK: Di atas Wishlist -->
+		<div class="w-full flex justify-center absolute top-0 left-0 pt-6 md:pt-8 z-30">
 			<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent shadow-[0_0_15px_rgba(255,255,255,0.3)]"></div>
 		</div>
 		
 		<Wishlist />
 	</div>
 
-	<!-- LIGHT STREAK: Wishlist ke Portfolio -->
-	<div class="w-full flex justify-center bg-[#0a0a0a]">
-		<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-	</div>
-
 	<!-- ========================================== -->
 	<!-- PORTFOLIO -->
 	<!-- ========================================== -->
-	<section id="portfolio" class="py-24 bg-[#0a0a0a] px-6">
+	<section id="portfolio" class="py-16 md:py-24 bg-[#0a0a0a] px-4 md:px-6">
 		<div class="max-w-6xl mx-auto">
-			<div class="hidden-anim mb-12 flex justify-between items-end">
+			<div class="hidden-anim mb-8 md:mb-12 flex justify-between items-end">
 				<div>
-					<h2 class="text-3xl font-bold mb-2 text-white">Proyek Pilihan</h2>
-					<p class="text-gray-400">Beberapa karya yang kami banggakan.</p>
+					<h2 class="text-2xl md:text-3xl font-bold mb-2 text-white">Proyek Pilihan</h2>
+					<p class="text-sm md:text-base text-gray-400">Beberapa karya yang kami banggakan.</p>
 				</div>
 			</div>
-			<div class="grid md:grid-cols-2 gap-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
 				<!-- Project 1 -->
 				<a href="https://tatausahasmpn3rajadesa.my.id" target="_blank" class="hidden-anim group cursor-pointer block">
-					<div class="w-full aspect-video bg-white/5 rounded-2xl mb-4 overflow-hidden relative border border-white/10">
+					<div class="w-full aspect-video bg-white/5 rounded-2xl mb-3 md:mb-4 overflow-hidden relative border border-white/10">
 						<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-300 z-10"></div>
 						<img src="/images/smpn3.png" alt="Sistem administrasi tata usaha seragam" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
 					</div>
-					<h3 class="text-xl font-bold group-hover:underline text-white">Sistem Manajemen Inventaris</h3>
-					<p class="text-gray-400 text-sm">Web App / Dashboard Analytics</p>
+					<h3 class="text-lg md:text-xl font-bold group-hover:underline text-white">Sistem Manajemen Inventaris</h3>
+					<p class="text-xs md:text-sm text-gray-400">Web App / Dashboard Analytics</p>
 				</a>
 
 				<!-- Project 2 -->
 				<a href="https://link-demo-proyek-2.com" target="_blank" class="hidden-anim group cursor-pointer block" style="transition-delay: 150ms;">
-					<div class="w-full aspect-video bg-white/5 rounded-2xl mb-4 overflow-hidden relative border border-white/10">
+					<div class="w-full aspect-video bg-white/5 rounded-2xl mb-3 md:mb-4 overflow-hidden relative border border-white/10">
 						<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-300 z-10"></div>
 						<img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=2070&auto=format&fit=crop" alt="Kampanye Produk Kecantikan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
 					</div>
-					<h3 class="text-xl font-bold group-hover:underline text-white">Kampanye Produk Kecantikan</h3>
-					<p class="text-gray-400 text-sm">Landing Page / Interactive Scroll</p>
+					<h3 class="text-lg md:text-xl font-bold group-hover:underline text-white">Kampanye Produk Kecantikan</h3>
+					<p class="text-xs md:text-sm text-gray-400">Landing Page / Interactive Scroll</p>
 				</a>
 			</div>
 		</div>
 	</section>
 
-	<!-- LIGHT STREAK: Portfolio ke FAQ -->
+	<!-- LIGHT STREAK -->
 	<div class="w-full flex justify-center bg-[#0a0a0a]">
 		<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
 	</div>
@@ -243,39 +254,39 @@ import Wishlist from "./wishlist.astro";
 	<!-- ========================================== -->
 	<!-- FAQ -->
 	<!-- ========================================== -->
-	<section class="py-24 px-6 bg-[#0a0a0a]">
+	<section class="py-16 md:py-24 px-4 md:px-6 bg-[#0a0a0a]">
 		<div class="max-w-4xl mx-auto">
-			<div class="hidden-anim text-center mb-12">
-				<h2 class="text-3xl font-bold mb-2 text-white">Pertanyaan Umum</h2>
-				<p class="text-gray-400">Hal yang biasanya ditanyakan klien.</p>
+			<div class="hidden-anim text-center mb-8 md:mb-12">
+				<h2 class="text-2xl md:text-3xl font-bold mb-2 text-white">Pertanyaan Umum</h2>
+				<p class="text-sm md:text-base text-gray-400">Hal yang biasanya ditanyakan klien.</p>
 			</div>
-			<div class="space-y-4 hidden-anim">
-				<details class="group bg-white/5 p-6 rounded-2xl cursor-pointer border border-white/10">
-					<summary class="font-bold list-none flex justify-between items-center text-white">
+			<div class="space-y-3 md:space-y-4 hidden-anim">
+				<details class="group bg-white/5 p-4 md:p-6 rounded-2xl cursor-pointer border border-white/10">
+					<summary class="font-bold text-sm md:text-base list-none flex justify-between items-center text-white">
 						Berapa lama proses pengerjaan?
 						<span class="transition group-open:rotate-180 text-gray-500">↓</span>
 					</summary>
-					<p class="mt-4 text-gray-400">Tergantung kompleksitas, rata-rata 2-6 minggu.</p>
+					<p class="mt-3 md:mt-4 text-xs md:text-sm text-gray-400">Tergantung kompleksitas, rata-rata 2-6 minggu.</p>
 				</details>
-				<details class="group bg-white/5 p-6 rounded-2xl cursor-pointer border border-white/10">
-					<summary class="font-bold list-none flex justify-between items-center text-white">
+				<details class="group bg-white/5 p-4 md:p-6 rounded-2xl cursor-pointer border border-white/10">
+					<summary class="font-bold text-sm md:text-base list-none flex justify-between items-center text-white">
 						Apakah bisa revisi?
 						<span class="transition group-open:rotate-180 text-gray-500">↓</span>
 					</summary>
-					<p class="mt-4 text-gray-400">Ya, kami menyediakan 2-3 kali revisi mayor sesuai kesepakatan.</p>
+					<p class="mt-3 md:mt-4 text-xs md:text-sm text-gray-400">Ya, kami menyediakan 2-3 kali revisi mayor sesuai kesepakatan.</p>
 				</details>
-				<details class="group bg-white/5 p-6 rounded-2xl cursor-pointer border border-white/10">
-					<summary class="font-bold list-none flex justify-between items-center text-white">
+				<details class="group bg-white/5 p-4 md:p-6 rounded-2xl cursor-pointer border border-white/10">
+					<summary class="font-bold text-sm md:text-base list-none flex justify-between items-center text-white">
 						Bagaimana sistem pembayaran?
 						<span class="transition group-open:rotate-180 text-gray-500">↓</span>
 					</summary>
-					<p class="mt-4 text-gray-400">DP 50% di awal, pelunasan setelah proyek selesai dan disetujui.</p>
+					<p class="mt-3 md:mt-4 text-xs md:text-sm text-gray-400">DP 50% di awal, pelunasan setelah proyek selesai dan disetujui.</p>
 				</details>
 			</div>
 		</div>
 	</section>
 
-	<!-- LIGHT STREAK: FAQ ke Contact -->
+	<!-- LIGHT STREAK -->
 	<div class="w-full flex justify-center bg-[#0a0a0a]">
 		<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
 	</div>
@@ -283,12 +294,12 @@ import Wishlist from "./wishlist.astro";
 	<!-- ========================================== -->
 	<!-- CONTACT (FORMSPREE) -->
 	<!-- ========================================== -->
-	<section id="contact" class="py-24 bg-black text-white px-6">
-		<div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-16">
-			<div class="hidden-anim">
-				<h2 class="text-4xl font-bold mb-6">Mari Berkolaborasi.</h2>
-				<p class="text-gray-400 mb-8">Punya ide proyek? Kirimkan pesan dan kami akan segera menghubungi Anda.</p>
-				<div class="space-y-4 text-gray-300">
+	<section id="contact" class="py-16 md:py-24 bg-black text-white px-4 md:px-6">
+		<div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16">
+			<div class="hidden-anim text-center md:text-left">
+				<h2 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6">Mari Berkolaborasi.</h2>
+				<p class="text-sm md:text-base text-gray-400 mb-6 md:mb-8">Punya ide proyek? Kirimkan pesan dan kami akan segera menghubungi Anda.</p>
+				<div class="space-y-3 md:space-y-4 text-sm md:text-base text-gray-300">
 					<p>Email: hello@digikalastudio.com</p>
 					<p>
 						WhatsApp: <a href="https://wa.me/6285252170250" target="_blank" class="underline hover:text-white">+62 852-5217-0250</a>
@@ -296,25 +307,25 @@ import Wishlist from "./wishlist.astro";
 				</div>
 			</div>
 
-			<form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="hidden-anim space-y-4 bg-white/5 p-8 rounded-2xl border border-white/10" style="transition-delay: 200ms;">
+			<form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="hidden-anim space-y-3 md:space-y-4 bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10" style="transition-delay: 200ms;">
 				<div>
-					<label class="block text-sm text-gray-400 mb-2">Nama</label>
-					<input type="text" name="name" required class="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-white transition text-white" />
+					<label class="block text-xs md:text-sm text-gray-400 mb-2">Nama</label>
+					<input type="text" name="name" required class="w-full bg-transparent border-b border-gray-600 py-2 text-sm md:text-base focus:outline-none focus:border-white transition text-white" />
 				</div>
 				<div>
-					<label class="block text-sm text-gray-400 mb-2">Email</label>
-					<input type="email" name="email" required class="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-white transition text-white" />
+					<label class="block text-xs md:text-sm text-gray-400 mb-2">Email</label>
+					<input type="email" name="email" required class="w-full bg-transparent border-b border-gray-600 py-2 text-sm md:text-base focus:outline-none focus:border-white transition text-white" />
 				</div>
 				<div>
-					<label class="block text-sm text-gray-400 mb-2">Pesan</label>
-					<textarea name="message" rows="3" required class="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-white transition text-white"></textarea>
+					<label class="block text-xs md:text-sm text-gray-400 mb-2">Pesan</label>
+					<textarea name="message" rows="3" required class="w-full bg-transparent border-b border-gray-600 py-2 text-sm md:text-base focus:outline-none focus:border-white transition text-white"></textarea>
 				</div>
-				<button type="submit" class="w-full bg-white text-black font-bold py-3 rounded-full hover:bg-gray-200 transition mt-4">Kirim Pesan</button>
+				<button type="submit" class="w-full bg-white text-black font-bold py-3 rounded-full hover:bg-gray-200 transition mt-4 text-sm md:text-base">Kirim Pesan</button>
 			</form>
 		</div>
 	</section>
 
-	<!-- LIGHT STREAK: Contact ke Footer -->
+	<!-- LIGHT STREAK -->
 	<div class="w-full flex justify-center bg-black">
 		<div class="w-[80%] max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 	</div>
@@ -322,10 +333,10 @@ import Wishlist from "./wishlist.astro";
 	<!-- ========================================== -->
 	<!-- FOOTER -->
 	<!-- ========================================== -->
-	<footer class="bg-black text-gray-500 py-8 text-center text-sm border-t border-white/10">
-		<div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+	<footer class="bg-black text-gray-500 py-6 md:py-8 text-center text-xs md:text-sm border-t border-white/10">
+		<div class="max-w-6xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
 			<p>© 2026 digikala studio. All rights reserved.</p>
-			<div class="flex gap-6">
+			<div class="flex gap-4 md:gap-6">
 				<a href="#" class="hover:text-white transition">Instagram</a>
 				<a href="#" class="hover:text-white transition">LinkedIn</a>
 				<a href="#" class="hover:text-white transition">GitHub</a>

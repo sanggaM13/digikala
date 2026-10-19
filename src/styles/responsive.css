@@ -1,0 +1,52 @@
+/* ========================================== */
+/* PENGATURAN UMUM (Mobile First / HP)        */
+/* ========================================== */
+
+/* Memastikan semua elemen tidak melebar keluar layar */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Jarak antar section di HP */
+.section-padding {
+    padding-top: 4rem; /* py-16 */
+    padding-bottom: 4rem;
+}
+
+/* ========================================== */
+/* TABLET (Lebar layar 768px ke atas)         */
+/* ========================================== */
+@media (min-width: 768px) {
+    .section-padding {
+        padding-top: 6rem; /* py-24 */
+        padding-bottom: 6rem;
+    }
+
+    /* Menyesuaikan tinggi sticky Services agar pas di tablet */
+    .sticky-services-wrapper {
+        height: 180vh;
+    }
+    
+    /* Mengatur margin negatif Wishlist di tablet */
+    .wishlist-overlap {
+        margin-top: -180px; 
+    }
+}
+
+/* ========================================== */
+/* LAPTOP / DESKTOP (Lebar layar 1024px ke atas) */
+/* ========================================== */
+@media (min-width: 1024px) {
+    /* Memastikan container utama tidak terlalu lebar */
+    .container-main {
+        max-width: 72rem; /* setara max-w-6xl */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Efek Hover khusus Desktop (opsional) */
+    .hover-scale:hover {
+        transform: scale(1.05);
+    }
+}
